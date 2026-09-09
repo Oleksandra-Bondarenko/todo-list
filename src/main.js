@@ -1,8 +1,10 @@
 import { refs } from './js/refs';
-import { addTask, initTasks, deleteTask } from './js/tasks';
+import { addTask, deleteTask, initTasks } from './js/tasks';
+import { initTheme, toggleBtnClick } from './js/theme-switcher';
 
-// виклик функції, щоб при відкритті або перезавантаженні сторінки вже збережені дані одразу відображались
 initTasks();
+initTheme();
 
 refs.form.addEventListener('submit', addTask);
 refs.taskList.addEventListener('click', deleteTask);
+refs.themeToggleBtn.addEventListener('click', toggleBtnClick);
