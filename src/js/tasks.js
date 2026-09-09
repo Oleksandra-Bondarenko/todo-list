@@ -30,10 +30,6 @@ export function addTask(event) {
   event.target.reset();
 }
 
-export function initTasks() {
-  renderTasks(tasks);
-}
-
 export function deleteTask(event) {
   // перевірка, чи натиснули саме на кнопку
   if (event.target.nodeName !== 'BUTTON') {
@@ -55,4 +51,8 @@ export function deleteTask(event) {
 
   // зберегти в localStorage оновлений масив
   saveState(LS_KEYS.tasks, tasks);
+}
+
+export function initTasks() {
+  renderTasks(tasks);
 }
